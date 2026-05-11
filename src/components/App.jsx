@@ -5,7 +5,7 @@ import PlantPage from "./PlantPage";
 // fetch plant on page load
 function App() {
   const [plants, setPlants] = useState([])
-  const [searchQuery, setSearcgQuery] = useState("")
+  const [searchQuery, setSearchQuery] = useState("")
 
   useEffect(() => {
     fetch("http://localhost:6001/plants")
