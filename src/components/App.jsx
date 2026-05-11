@@ -8,7 +8,7 @@ function App() {
   const [searchQuery, setSearcgQuery] = useState("")
 
   useEffect(() => {
-    fetch("http://localhost:5173/plants")
+    fetch("http://localhost:6001/plants")
       .then((res) => res.json())
       .then((data) => setPlants(data))
     

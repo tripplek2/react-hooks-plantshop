@@ -18,7 +18,7 @@ function NewPlantForm({ onAddPlant }) {
     }
 
     // POST request
-    fetch("http://localhost:5173/plants", {
+    fetch("http://localhost:6001/plants", {
       method: "POST",
       headers: {
         "content-type": "application/json"
