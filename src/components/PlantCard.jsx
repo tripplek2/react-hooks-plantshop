@@ -13,7 +13,7 @@ function PlantCard({ plant, onSoldOut }) {
       <p>Price: {plant.price}</p>
 
       
-      <button className="primary" onClick={() => onSoldOut(plant.id)}>{plant.inStock ? "Mark as Sold Out" : "Sold Out"}</button>
+      <button className="primary" onClick={() => onSoldOut(plant.id)}>{plant.inStock ? "In Stock" : "Sold Out"}</button>
       
     </li>
   );

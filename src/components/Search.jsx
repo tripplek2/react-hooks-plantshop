@@ -8,6 +8,7 @@ function Search({ searchQuery, setSearchQuery }) {
         type="text"
         id="search"
         placeholder="Type a name to search..."
+        value={searchQuery}
         onChange={(e) => setSearchQuery(e.target.value)} 
       />
     </div>

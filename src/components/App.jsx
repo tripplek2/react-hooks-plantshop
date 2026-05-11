@@ -1,4 +1,4 @@
-import React from "react";
+import { useEffect, useState } from "react";
 import Header from "./Header";
 import PlantPage from "./PlantPage";
 
@@ -36,6 +36,7 @@ function App() {
       <PlantPage
         plants={filteredPlants}
         searchQuery={searchQuery}
+        setSearchQuery={setSearchQuery}
         onAddPlant={handleAddPlant}
         onSoldOut={HandleSoldOut} />
     </div>

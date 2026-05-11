@@ -1,4 +1,4 @@
-import React from "react";
+import { useState } from "react";
 
 function NewPlantForm({ onAddPlant }) {
   // form state
@@ -13,15 +13,15 @@ function NewPlantForm({ onAddPlant }) {
     const newPlant = {
       name,
       image,
-      price: Number(price),
-      inStock: true
+      price: price,
+      
     }
 
     // POST request
     fetch("http://localhost:6001/plants", {
       method: "POST",
       headers: {
-        "content-type": "application/json"
+        "Content-type": "application/json"
       },
       body: JSON.stringify(newPlant)
     })

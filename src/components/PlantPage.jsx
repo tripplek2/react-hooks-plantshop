@@ -4,7 +4,7 @@ import PlantList from "./PlantList";
 import Search from "./Search";
 
 function PlantPage({
-  PlantList,
+  plants,
   searchQuery,
   setSearchQuery,
   onAddPlant,
