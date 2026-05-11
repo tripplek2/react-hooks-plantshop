@@ -10,7 +10,12 @@ function App() {
   useEffect(() => {
     fetch("http://localhost:6001/plants")
       .then((res) => res.json())
-      .then((data) => setPlants(data))
+      .then((data) => {
+        const plantsWithStock = data.map((plant) => ({
+          ...plant,
+          instock: plant.instock ?? true 
+        }))
+        setPlants(plantsWithStock) })
     
   }, [])
   // add new plant
@@ -22,7 +27,7 @@ function App() {
   function HandleSoldOut(id) {
     const updatedPlants = plants.map((plant) => 
       plant.id === id
-       ?{ ...plant, instock: false } : plant 
+       ?{ ...plant, soldOut: !plant.soldOut } : plant 
     )
     setPlants(updatedPlants)
   }
